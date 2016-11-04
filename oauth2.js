@@ -82,7 +82,7 @@ var oauth2Utils = {
    sessionStorage.clear();
  },
  'getAccessToken' : function(clientId) {
-   return getSessionItem(clientId  + '.oauth2.accessToken');
+   return oauth2Utils.getSessionItem(clientId  + '.oauth2.accessToken');
  }   
 };
 
