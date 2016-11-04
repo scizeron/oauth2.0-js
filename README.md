@@ -1,1 +1,2 @@
-# oauth2.0-js
+.settings/
+.project
