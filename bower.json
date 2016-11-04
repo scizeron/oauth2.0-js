@@ -1,0 +1,20 @@
+{
+  "name": "oauth2-js",
+  "authors": [
+    "Stéphane CIZERON <stephane.cizeron@gmail.com>"
+  ],
+  "description": "oauth2 utils",
+  "main": "oauth2.js",
+  "keywords": [
+    "oauth2"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/scizeron/oauth2.0-js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
