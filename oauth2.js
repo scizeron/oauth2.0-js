@@ -83,7 +83,10 @@ var oauth2Utils = {
  },
  'getAccessToken' : function(clientId) {
    return oauth2Utils.getSessionItem(clientId  + '.oauth2.accessToken');
- }   
+ },
+ 'removeAccessToken' : function(clientId) {
+   return oauth2Utils.removeItem(clientId  + '.oauth2.accessToken');
+ }      
 };
 
 var oauth2 = {
@@ -145,6 +148,7 @@ var oauth2 = {
    return accessToken;
  },
  'authorize' : function(clientId, scopes, authorizeUrl, redirectUri) {
+  oauth2Utils.removeAccessToken(clientId);
   var state = oauth2Utils.guid();
   var url = authorizeUrl + '?client_id=' + encodeURIComponent(clientId) 
 		  				 + '&response_type=token'
@@ -166,6 +170,7 @@ var oauth2 = {
   oauth2Utils.debug('- redirect_uri  : ' + redirectUri);
   oauth2Utils.debug('---------------------------------------------------------------');
     
-  window.location.replace(url);
+  window.location.replace(url);  
+    
  }
 }
